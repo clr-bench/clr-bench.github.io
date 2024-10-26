@@ -69,6 +69,12 @@
     display: flex;
     gap: 10px;
   }
+  /* Button Container Styling for Center Alignment */
+  .button-container {
+    display: inline-flex; /* Inline layout to keep buttons centered */
+    gap: 10px; /* Spacing between buttons */
+    margin-top: 15px;
+  }
 
   /* Fancy Button Styling */
   .fancy-button {
@@ -92,18 +98,26 @@
     background-color: #3e8e41;
     transform: scale(0.95);
   }
+
   </style>
 </head>
 <body>
 
-<header>
+<header >
   <img src="images/logo.png" alt="CLR-Bench Logo" style="width: 100px; height: auto;">
   <h1><code>CLR-Bench</code>: Evaluating Large Language Models in College-level Reasoning</h1>
   <p style="font-size: 20px; line-height: 1.5;">
     Junnan Dong, Zijin Hong, Yuanchen Bei, Feiran Huang, Xinrun Wang, Xiao Huang</p><br>
   <p style="font-size: 16px; line-height: 1;">The Hong Kong Polytechnic University, Jinan University, Singapore Management University
   </p>
-</header>
+</header>  
+<!-- Fancy Buttons Section -->
+  <div class="button-container" style="text-align: center;">
+    <a href="link-to-code" class="fancy-button" target="_blank">Code</a>
+    <a href="link-to-paper" class="fancy-button" target="_blank">Paper</a>
+    <a href="link-to-github-stars" class="fancy-button" target="_blank">⭐ GitHub Stars</a>
+  </div>
+  
 <div class="images section">
   <img src="images/running.png" alt="Running Example" style="width: 1000px; height: auto;">
 </div>
@@ -118,13 +132,7 @@
     \( \text{Q}\rightarrow\text{A} \) to measure the performance of direct <b><u>a</u></b>nswer prediction, and \( \text{Q}\rightarrow\text{AR} \) to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously. Extensive experiments are conducted with 40 LLMs over 1,018 discipline-specific questions. The results demonstrate the key insights that LLMs, even the best closed-source LLM, i.e., GPT-4 turbo, tend to '<b><i>guess</i></b>' the college-level answers. It shows a dramatic decrease in accuracy from 63.31% \text{Q}\rightarrow\text{A} to 39.00% \text{Q}\rightarrow\text{AR}, indicating an unsatisfactory reasoning ability.
   </p>
   </section>
-  
-  <!-- Fancy Buttons Section -->
-  <div class="button-container">
-    <a href="link-to-code" class="fancy-button" target="_blank">Code</a>
-    <a href="link-to-paper" class="fancy-button" target="_blank">Paper</a>
-    <a href="link-to-github-stars" class="fancy-button" target="_blank">⭐ GitHub Stars</a>
-  </div>
+
   <!-- Images Section -->
   <div class="images section">
     <img src="images/figure1.png" alt="Framework Diagram">
