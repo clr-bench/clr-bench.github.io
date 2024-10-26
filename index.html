@@ -42,7 +42,7 @@
     h2 { font-size: 1.8em; color: #4a90e2; margin-bottom: 15px; }
 
     /* Intro Section */
-    .intro p { font-size: 1.1em; color: #444; line-height: 1.6; }
+    .intro p { font-size: 1em; color: #444; line-height: 1.6; }
     .images { text-align: center; margin: 20px 0; }
     .images img { max-width: 90%; height: auto; margin: 10px; border-radius: 10px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); }
 
@@ -69,7 +69,7 @@
 
 <header>
   <img src="images/logo.png" alt="CLR-Bench Logo">
-  <h1>CLR-Bench: Evaluating Large Language Models in College-level Reasoning<be>
+  <h1><code>CLR-Bench</code>: Evaluating Large Language Models in College-level Reasoning<be>
   <style font-size: 10>Junnan Dong, Zijin Hong, Yuanchen Bei, Feiran Huang, Xinrun Wang, Xiao Huang<br>
   The Hong Kong Polytechnic University, Jinan University, Singapore Management University</style>
   </h1>
@@ -79,7 +79,12 @@
   <!-- Intro Section -->
   <section class="section intro">
     <h2>About CLR-Bench</h2>
-    <p>CLR-Bench is a comprehensive benchmark designed to evaluate large language models' reasoning abilities in college-level scenarios. This leaderboard tracks the performance of various LLMs across diverse academic domains, providing insights into their strengths and areas for improvement.</p>
+    <p> Large language models (LLMs) have demonstrated their remarkable performance across various language understanding tasks. While emerging benchmarks have been proposed to evaluate LLMs in various domains such as mathematics and computer science, they merely measure the accuracy in terms of the final prediction on multi-choice questions. However, it remains insufficient to verify the essential understanding of LLMs given a chosen choice.
+    To fill this gap, we present <code>CLR-Bench</code> to comprehensively evaluate the LLMs in complex college-level reasoning. Specifically:
+    \((i)\) we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 5 types of questions, each associated with detailed explanations from experts.
+    \((ii)\) To quantify a fair evaluation of LLMs' reasoning ability, we formalize the criteria with two novel metrics: 
+    \( \text{Q}\rightarrow\text{A} \) to measure the performance of direct <b><u>a</u></b>nswer prediction, and \( \text{Q}\rightarrow\text{AR} \) to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.
+  </p>
   </section>
 
   <!-- Images Section -->
