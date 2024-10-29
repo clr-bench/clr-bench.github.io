@@ -75,7 +75,16 @@
     gap: 10px; /* Spacing between buttons */
     margin-top: 15px;
   }
-
+pre {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+            color: #333;
+        }
   /* Fancy Button Styling */
   .fancy-button {
     background-color: #458B00; /* Primary button color */
@@ -126,11 +135,14 @@
   <section class="section intro">
     <h2 color: black>Sketched Overview</h2>
     <p> Large language models (LLMs) have demonstrated their remarkable performance across various language understanding tasks. While emerging benchmarks have been proposed to evaluate LLMs in various domains such as mathematics and computer science, they merely measure the accuracy in terms of the final prediction on multi-choice questions. However, it remains insufficient to verify the essential understanding of LLMs given a chosen choice.
-    To fill this gap, we present <code>CLR-Bench</code> to comprehensively evaluate the LLMs in complex college-level reasoning. Specifically:
-    \((i)\) we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 5 types of questions, each associated with detailed explanations from experts.
-    \((ii)\) To quantify a fair evaluation of LLMs' reasoning ability, we formalize the criteria with two novel metrics: 
-    \( \text{Q}\rightarrow\text{A} \) to measure the performance of direct <b><u>a</u></b>nswer prediction, and \( \text{Q}\rightarrow\text{AR} \) to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously. Extensive experiments are conducted with 40 LLMs over 1,018 discipline-specific questions. The results demonstrate the key insights that LLMs, even the best closed-source LLM, i.e., GPT-4 turbo, tend to '<b><i>guess</i></b>' the college-level answers. It shows a dramatic decrease in accuracy from 63.31% \text{Q}\rightarrow\text{A} to 39.00% \text{Q}\rightarrow\text{AR}, indicating an unsatisfactory reasoning ability.
-  </p>
+    To fill this gap, we present <pre><code>CLR-Bench</code></pre> to comprehensively evaluate the LLMs in complex college-level reasoning. <br>
+    <b>Contributions</b>:<br>
+    📌 we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 5 types of questions, each associated with detailed explanations from experts.
+    ⚒  We formalize the criteria with two novel metrics: <br>
+    \( \text{Q}\rightarrow\text{A} \) to measure the performance of direct <b><u>a</u></b>nswer prediction, and \( \text{Q}\rightarrow\text{AR} \) to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.<br>
+    <b>Key Insignts</b>:<br>
+    🤔 LLMs are potentially '<b><i>guess</i></b>' the answers for college-level questions, instead of truly understanding the rationale with a dramatically dropping \(Q$\rightarrow$AR\).<br>
+    🔍 Model sizes do <b>not</b> inherently guarantee superior performance in reasoning, despite larger models often achieving higher accuracy in \(Q$\rightarrow$A\). Several smaller models notably exhibit stronger performance in \(Q$\rightarrow$AR\), surpassing larger ones to provide accurate and coherent rationales.</p>
   </section>
 
   <!-- Images Section -->
