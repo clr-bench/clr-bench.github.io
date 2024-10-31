@@ -196,72 +196,254 @@ pre {
     🔍 Model sizes do <b>not</b> inherently guarantee superior performance in reasoning, despite larger models often achieving higher accuracy in \(\text{Q}\rightarrow\text{A}\). Several smaller models notably exhibit stronger performance in \(\text{Q}\rightarrow\text{AR}\), surpassing larger ones to provide accurate and coherent rationales.</p>
   </section>
 	
-<div id="leaderboard-section">
+<!-- <div id="leaderboard-section">
     <h2 style="font-size: 18px;">CLR-Bench Leaderboard</h2>
     <div id="image-container">
         <img src="images/leaderboard.png" alt="CLR-Bench Leaderboard" style="width:100%; max-width:1200px;"/>
     </div>
-</div> 
+</div>  -->
 
 <table class="leaderboard-table">
   <thead>
     <tr>
-      <th rowspan="2">#</th>
-      <th rowspan="2">Models</th>
-      <th colspan="6">Q→A (Direct performance of prediction)</th>
-      <th colspan="6">Q→AR (Reasoning performance of rationale)</th>
-    </tr>
-    <tr>
-      <th>MC</th>
-      <th>MS</th>
-      <th>TF</th>
-      <th>FB</th>
-      <th>OE</th>
+      <th>#</th>
+      <th>LLM Families</th>
       <th>Q→A</th>
-      <th>MC</th>
-      <th>MS</th>
-      <th>TF</th>
-      <th>FB</th>
-      <th>OE</th>
       <th>Q→AR</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>1</td>
-      <td>qwen2.5-7b</td>
-      <td>69.12%</td>
-      <td>54.95%</td>
-      <td>54.11%</td>
-      <td>40.97%</td>
-      <td>34.62%</td>
-      <td>54.62%</td>
-      <td>43.55%</td>
-      <td>34.46%</td>
-      <td>43.43%</td>
-      <td>45.00%</td>
-      <td class="highlight">8.36%</td>
-      <td>33.37%</td>
+      <td>claude-3-opus</td>
+      <td>62.57%</td>
+      <td>38.56%</td>
     </tr>
     <tr>
       <td>2</td>
+      <td>claude-3-sonnet</td>
+      <td>60.51%</td>
+      <td>38.51%</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>gpt-3.5-turbo</td>
+      <td>53.98%</td>
+      <td>34.70%</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>gpt-4-turbo</td>
+      <td>63.31%</td>
+      <td>39.00%</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>gpt-4o</td>
+      <td>60.76%</td>
+      <td>41.60%</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>deepseek-chat</td>
+      <td>62.43%</td>
+      <td>42.09%</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>deepseek-7b-base</td>
+      <td>40.08%</td>
+      <td>20.73%</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>deepseek-7b-chat</td>
+      <td>38.02%</td>
+      <td>23.67%</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>gemma-7b-it</td>
+      <td>25.83%</td>
+      <td>18.74%</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>gemma2-9b</td>
+      <td>16.26%</td>
+      <td>8.77%</td>
+    </tr>
+    <tr>
+      <td>11</td>
       <td>gemma2-9b-it</td>
-      <td>72.81%</td>
-      <td>50.45%</td>
-      <td>54.02%</td>
-      <td>40.52%</td>
       <td>53.54%</td>
-      <td>53.54%</td>
-      <td>45.52%</td>
-      <td>37.15%</td>
-      <td>47.15%</td>
-      <td>44.52%</td>
-      <td>7.90%</td>
       <td>34.63%</td>
     </tr>
-    <!-- Add more rows as needed -->
+    <tr>
+      <td>12</td>
+      <td>llama-2-7b-chat</td>
+      <td>35.07%</td>
+      <td>21.32%</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>llama-2-7b</td>
+      <td>38.75%</td>
+      <td>20.43%</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>llama-3-8b</td>
+      <td>46.61%</td>
+      <td>24.19%</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>llama-3-8b-instruct</td>
+      <td>50.15%</td>
+      <td>31.34%</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>llama-3.1-8b</td>
+      <td>48.82%</td>
+      <td>26.11%</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>llama-3.1-8b-instruct</td>
+      <td>50.49%</td>
+      <td>29.54%</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>llama-3.1-70b</td>
+      <td>56.97%</td>
+      <td>33.60%</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>llama-3.1-70b-instruct</td>
+      <td>60.22%</td>
+      <td>33.67%</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>llama-3.2-1b-instruct</td>
+      <td>33.10%</td>
+      <td>19.38%</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>llama-3.2-3b-instruct</td>
+      <td>43.37%</td>
+      <td>28.36%</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>mistral-7b-instruct-v0.1</td>
+      <td>43.27%</td>
+      <td>26.28%</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>mistral-7b-v0.1</td>
+      <td>48.18%</td>
+      <td>26.33%</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>mixtral-8x7b-instruct-v0.1</td>
+      <td>41.36%</td>
+      <td>30.48%</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>mixtral-8x7b-v0.1</td>
+      <td>51.38%</td>
+      <td>29.00%</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>phi-3-mini-4k-instruct</td>
+      <td>53.78%</td>
+      <td>35.56%</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>phi-3-medium-4k-instruct</td>
+      <td>57.12%</td>
+      <td>37.60%</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>qwen1.5-7b-chat</td>
+      <td>26.67%</td>
+      <td>22.35%</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>qwen1.5-7b</td>
+      <td>47.10%</td>
+      <td>27.16%</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>qwen2.5-7b</td>
+      <td>54.62%</td>
+      <td>33.37%</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>qwen2.5-7b-instruct</td>
+      <td>56.93%</td>
+      <td>37.25%</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>qwen2.5-32b-instruct</td>
+      <td>63.31%</td>
+      <td><span style="color: purple; text-decoration: underline; font-weight: bold;">42.29%</span></td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>qwen2.5-72b</td>
+      <td>62.52%</td>
+      <td>37.89%</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>qwen2.5-72b-instruct</td>
+      <td><span style="color: purple; text-decoration: underline; font-weight: bold;">64.05%</span></td>
+      <td>40.79%</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>yi-1.5-6b-chat</td>
+      <td>41.60%</td>
+      <td>25.56%</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>yi-1.5-6b</td>
+      <td>48.08%</td>
+      <td>27.80%</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>yi-1.5-34b-chat</td>
+      <td>52.95%</td>
+      <td>33.87%</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>yi-1.5-34b</td>
+      <td>56.43%</td>
+      <td>32.22%</td>
+    </tr>
   </tbody>
 </table>
+
 
   <!-- Images Section -->
   <div class="images section">
