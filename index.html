@@ -141,7 +141,7 @@ pre {
     <p  style="font-size: 14px;">
     📌 we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 1018 questions in 5 types, i.e., Multi-choice (MC), Multi-select (MS), Fill-in-blank (FB), Open-ended (OE), True-or-false (TF), each associated with detailed explanations from experts.<br>
     ⚖  We formalize the criteria with two novel metrics: <br>
-    \( \text{Q}\rightarrow\text{A} \) to measure the performance of direct <b><u>a</u></b>nswer prediction, and \( \text{Q}\rightarrow\text{AR} \) to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.<br><br></p>
+   <span style="color: "#8B1A1A";"> \( \text{Q}\rightarrow\text{A} \) </span> to measure the performance of direct <b><u>a</u></b>nswer prediction, and  <span style="color: "#8B1A1A";"> \( \text{Q}\rightarrow\text{AR}\) </span> to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.<br><br></p>
     <b>Key Insignts</b>:<br>
     <p  style="font-size: 14px;">
     🤔 LLMs are potentially '<b><i>guessing</i></b>' the answers for college-level questions, instead of truly understanding the rationale with a dramatically dropping \(\text{Q}\rightarrow\text{AR}\).<br>
@@ -164,10 +164,31 @@ pre {
 	
 
 <div class="images section">
+  <h2 style="font-size: 18px;">CLR-Bench Leaderboard</h2>
+
+  <!-- First image with text below -->
   <img src="images/bar.png" alt="Bar Chart">
+  <p style="font-size: 14px; text-align: center;">
+    <b>LLMs tend to ‘guess’ answers. </b> A detailed analysis of \( \text{Q}\rightarrow\text{AR} \) scores reveals that despite their relatively high accuracy in answering questions (\( \text{Q}\rightarrow\text{A} \)), many LLMs struggle significantly to provide coherent and accurate rationales.
+  </p>
+
+  <!-- Second image with text below -->
   <img src="images/radar.png" alt="Radar Chart">
-  <img src="images/topic.png" alt="Topic Chart">
+  <p style="font-size: 14px; text-align: center;">
+    LLMs are not good at non-MC questions. We visualize the radar diagrams to showcase the expertise of LLMs on different types of questions. Performance on non-MC questions presents another significant challenge for LLMs. Many models demonstrate reasonable performance on MC, yet their accuracy drops significantly when handling OE or FB questions, which require deeper reasoning and articulation.
+  </p>
+
+  <!-- Third image with text on the right -->
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <img src="images/topic.png" alt="Topic Chart" style="width: 50%; max-width: 600px;">
+    <p style="font-size: 14px;">
+      (i) Context-intensive tasks. Topics such as AI Introduction and Ethics of CS and AI require a solid understanding of conceptual frameworks. All three state-of-the-art LLMs demonstrate a surprisingly low performance with around 12.5% and 6.5% \( \text{Q}\rightarrow\text{AR} \). This suggests challenges in grasping nuanced ethical considerations. Similarly, scores in the AI Introduction domain reflect the models’ difficulty in conveying complex ideas coherently. These results highlight that while LLMs possess substantial factual knowledge, they often struggle with articulating and rationalizing that knowledge in contextually rich environments.
+      <br><br>
+      (ii) Reasoning-intensive tasks. Mathematics and Computer Architecture reflect a different situation compared with context-intensive tasks. All three models could perform significantly satisfying the \( \text{Q}\rightarrow\text{A} \) criteria; however, their performance decreases sharply on \( \text{Q}\rightarrow\text{AR} \) with over a 30% accuracy drop in average. This reflects the necessity for improved training techniques that focus on fostering deeper cognition for reasoning-intensive tasks.
+    </p>
+  </div>
 </div>
+
   <!-- Contact Section -->
   <section class="section contact">
     <h2>Contact</h2>
