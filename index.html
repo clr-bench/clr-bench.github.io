@@ -108,69 +108,19 @@ pre {
     background-color: #3e8e41;
     transform: scale(0.95);
   }
-  /* Table styling */
-  .leaderboard-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    margin: 20px 0;
-  }
-  
-  /* Header styling */
-  .leaderboard-table thead th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-
-  /* Body styling */
-  .leaderboard-table tbody td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-
-  /* Zebra striping */
-  .leaderboard-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  /* Sticky Header */
-  .leaderboard-table thead th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-  }
-
-  /* Highlight specific values */
-  .highlight {
-    color: #d9534f; /* Red color for low scores */
-    font-weight: bold;
-  }
-
-  /* Adjust for large screens */
-  @media (min-width: 768px) {
-    .leaderboard-table th, .leaderboard-table td {
-      padding: 8px;
-    }
-  }
- /* Wrapper Style */
+/* Wrapper Style */
   .decorated-table {
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: max-content;
-    margin: 0 auto;
+    width: 100%; /* Full width of page */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   /* Table Style */
   .decorated-table table {
-    width: 100%;
+    width: 100%; /* Full width of container */
     border-collapse: collapse;
   }
   
@@ -179,13 +129,13 @@ pre {
     background-color: #4a90e2;
     color: #ffffff;
     font-weight: bold;
-    padding: 10px;
+    padding: 12px;
     text-align: left;
   }
   
   /* Row Styling */
   .decorated-table td {
-    padding: 10px;
+    padding: 12px;
     border-bottom: 1px solid #ddd;
   }
   
