@@ -186,11 +186,11 @@ pre {
     <p  style="font-size: 14px;">
     📌 we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 1018 questions in 5 types, i.e., Multi-choice (MC), Multi-select (MS), Fill-in-blank (FB), Open-ended (OE), True-or-false (TF), each associated with detailed explanations from experts.<br>
     ⚖  We formalize the criteria with two novel metrics: <br>
-   <span style="color: "#8B1A1A";"> \( \text{Q}\rightarrow\text{A} \) </span> to measure the performance of direct <b><u>a</u></b>nswer prediction, and  <span style="color: "#8B1A1A";"> \( \text{Q}\rightarrow\text{AR}\) </span> to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.<br><br></p>
+   <b><span style="color: #8B1A1A;"> Q→A </span></b> to measure the performance of direct <b><u>a</u></b>nswer prediction, and <b> <span style="color: #8B1A1A;"> Q→AR </span> </b>to evaluate the joint ability to <b><u>a</u></b>nswer and provide <b><u>r</u></b>ationale simultaneously.<br><br></p>
     <b>Key Insignts</b>:<br>
     <p  style="font-size: 14px;">
-    🤔 LLMs are potentially '<b><i>guessing</i></b>' the answers for college-level questions, instead of truly understanding the rationale with a dramatically dropping \(\text{Q}\rightarrow\text{AR}\).<br>
-    🔍 Model sizes do <b>not</b> inherently guarantee superior performance in reasoning, despite larger models often achieving higher accuracy in \(\text{Q}\rightarrow\text{A}\). Several smaller models notably exhibit stronger performance in \(\text{Q}\rightarrow\text{AR}\), surpassing larger ones to provide accurate and coherent rationales.</p>
+    🤔 LLMs are potentially '<b><i>guessing</i></b>' the answers for college-level questions, instead of truly understanding the rationale with a dramatically dropping Q→AR.<br>
+    🔍 Model sizes do <b>not</b> inherently guarantee superior performance in reasoning, despite larger models often achieving higher accuracy in Q→A. Several smaller models notably exhibit stronger performance in Q→AR, surpassing larger ones to provide accurate and coherent rationales.</p>
   </section>
 	
 <!-- <div id="leaderboard-section">
@@ -456,7 +456,7 @@ pre {
   <!-- First image with text below -->
   <img src="images/bar.png" alt="Bar Chart">
   <p style="font-size: 16px; text-align: center;">
-    <b>LLMs tend to ‘guess’ answers. </b><br> A detailed analysis of \( \text{Q}\rightarrow\text{AR} \) scores reveals that despite their relatively high accuracy in answering questions (\( \text{Q}\rightarrow\text{A} \)), many LLMs struggle significantly to provide coherent and accurate rationales.
+    <b>LLMs tend to ‘guess’ answers. </b><br> A detailed analysis of Q→AR scores reveals that despite their relatively high accuracy in answering questions (Q→A), many LLMs struggle significantly to provide coherent and accurate rationales.
   </p>
 	<br>
 
@@ -471,9 +471,9 @@ pre {
     <img src="images/topic.png" alt="Topic Chart" style="width: 400px; height: 800px">
     <p style="font-size: 16px;">
 	<b>Discipline-specific insights</b><br>
-      \((i)\) <b>Context-intensive tasks</b>. Topics such as AI Introduction and Ethics of CS and AI require a solid understanding of conceptual frameworks. All three state-of-the-art LLMs demonstrate a surprisingly low performance with around 12.5% and 6.5% \( \text{Q}\rightarrow\text{AR} \). This suggests challenges in grasping nuanced ethical considerations. Similarly, scores in the AI Introduction domain reflect the models’ difficulty in conveying complex ideas coherently. These results highlight that while LLMs possess substantial factual knowledge, they often struggle with articulating and rationalizing that knowledge in contextually rich environments.
+      \((i)\) <b>Context-intensive tasks</b>. Topics such as AI Introduction and Ethics of CS and AI require a solid understanding of conceptual frameworks. All three state-of-the-art LLMs demonstrate a surprisingly low performance with around 12.5% and 6.5% Q→AR. This suggests challenges in grasping nuanced ethical considerations. Similarly, scores in the AI Introduction domain reflect the models’ difficulty in conveying complex ideas coherently. These results highlight that while LLMs possess substantial factual knowledge, they often struggle with articulating and rationalizing that knowledge in contextually rich environments.
       <br><br>
-      \((ii)\) <b>Reasoning-intensive tasks</b>. Mathematics and Computer Architecture reflect a different situation compared with context-intensive tasks. All three models could perform significantly satisfying the \( \text{Q}\rightarrow\text{A} \) criteria; however, their performance decreases sharply on \( \text{Q}\rightarrow\text{AR} \) with over a 30% accuracy drop in average. This reflects the necessity for improved training techniques that focus on fostering deeper cognition for reasoning-intensive tasks.
+      \((ii)\) <b>Reasoning-intensive tasks</b>. Mathematics and Computer Architecture reflect a different situation compared with context-intensive tasks. All three models could perform significantly satisfying the Q→A criteria; however, their performance decreases sharply on Q→AR with over a 30% accuracy drop in average. This reflects the necessity for improved training techniques that focus on fostering deeper cognition for reasoning-intensive tasks.
     </p>
   </div>
 </div>
