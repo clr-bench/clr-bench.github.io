@@ -108,6 +108,55 @@ pre {
     background-color: #3e8e41;
     transform: scale(0.95);
   }
+  /* Table styling */
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  
+  /* Header styling */
+  .leaderboard-table thead th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  /* Body styling */
+  .leaderboard-table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  /* Zebra striping */
+  .leaderboard-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* Sticky Header */
+  .leaderboard-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  /* Highlight specific values */
+  .highlight {
+    color: #d9534f; /* Red color for low scores */
+    font-weight: bold;
+  }
+
+  /* Adjust for large screens */
+  @media (min-width: 768px) {
+    .leaderboard-table th, .leaderboard-table td {
+      padding: 8px;
+    }
+  }
 
   </style>
 </head>
@@ -153,6 +202,66 @@ pre {
         <img src="images/leaderboard.png" alt="CLR-Bench Leaderboard" style="width:100%; max-width:1200px;"/>
     </div>
 </div> 
+
+<table class="leaderboard-table">
+  <thead>
+    <tr>
+      <th rowspan="2">#</th>
+      <th rowspan="2">Models</th>
+      <th colspan="6">Q→A (Direct performance of prediction)</th>
+      <th colspan="6">Q→AR (Reasoning performance of rationale)</th>
+    </tr>
+    <tr>
+      <th>MC</th>
+      <th>MS</th>
+      <th>TF</th>
+      <th>FB</th>
+      <th>OE</th>
+      <th>Q→A</th>
+      <th>MC</th>
+      <th>MS</th>
+      <th>TF</th>
+      <th>FB</th>
+      <th>OE</th>
+      <th>Q→AR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>qwen2.5-7b</td>
+      <td>69.12%</td>
+      <td>54.95%</td>
+      <td>54.11%</td>
+      <td>40.97%</td>
+      <td>34.62%</td>
+      <td>54.62%</td>
+      <td>43.55%</td>
+      <td>34.46%</td>
+      <td>43.43%</td>
+      <td>45.00%</td>
+      <td class="highlight">8.36%</td>
+      <td>33.37%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>gemma2-9b-it</td>
+      <td>72.81%</td>
+      <td>50.45%</td>
+      <td>54.02%</td>
+      <td>40.52%</td>
+      <td>53.54%</td>
+      <td>53.54%</td>
+      <td>45.52%</td>
+      <td>37.15%</td>
+      <td>47.15%</td>
+      <td>44.52%</td>
+      <td>7.90%</td>
+      <td>34.63%</td>
+    </tr>
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
 
   <!-- Images Section -->
   <div class="images section">
