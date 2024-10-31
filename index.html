@@ -157,7 +157,54 @@ pre {
       padding: 8px;
     }
   }
+ /* Wrapper Style */
+  .decorated-table {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: max-content;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Style */
+  .decorated-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Header Styling */
+  .decorated-table th {
+    background-color: #4a90e2;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Row Styling */
+  .decorated-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternating Row Colors */
+  .decorated-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Highlight Specific Cells */
+  .highlighted {
+    color: purple;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
+  /* Hover Effect for Rows */
+  .decorated-table tr:hover {
+    background-color: #e6f2ff;
+  }
   </style>
 </head>
 <body>
@@ -202,7 +249,7 @@ pre {
         <img src="images/leaderboard.png" alt="CLR-Bench Leaderboard" style="width:100%; max-width:1200px;"/>
     </div>
 </div>  -->
-
+<div class="decorated-table">
 <table class="leaderboard-table">
   <thead>
     <tr>
@@ -443,7 +490,7 @@ pre {
     </tr>
   </tbody>
 </table>
-
+</div>
 
   <!-- Images Section -->
   <div class="images section">
